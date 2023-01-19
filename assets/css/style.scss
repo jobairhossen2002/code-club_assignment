@@ -1,5 +1,145 @@
+// colors variables
+$white:#ffff;
+$black:#0e121e;
+$dark:#717379;
+$primary:#ff344c;
+$secondary:#1f3584;
+$transition:0.04s;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+body{
+    background-color:#1f3584;
+    font-size:18px;
+    line-height: 1.6rem;
+    font-weight: 500;
+}
+p{
+    color:$dark;
+}
+
+// button style
+.button-primary{
+    cursor:pointer;
+    background-color:$primary;
+    color:$white;
+    border: 1px solid transparent;
+    border-radius:8px ;
+    text-align: center;
+    padding:14px 24px;
+    margin-right:18px;
+    line-height: 18px;
+    font-weight: bold;
+    transition: $transition;
+
+    &:hover{
+        background-color:transparent;
+        color:$primary;
+        border-color:$primary;
+    }
+}
+
+
+.button-secondary{
+    cursor:pointer;
+    background-color:transparent;
+    color:$white;
+    border: 1px solid $white;
+    border-radius:8px ;
+    text-align: center;
+    padding:14px 24px;
+    margin-right:18px;
+    line-height: 18px;
+    font-weight: bold;
+    transition: $transition;
+
+    &:hover{
+        background-color:$primary;
+    }
+}
+
+// gird template
+.container{
+    max-width:1400px;
+    margin-right:auto;
+    margin-left:auto;
+    padding-right:24px;
+    padding-left:24px;
+}
+
+// start_header-are
+
+header{
+    background-color: $secondary;
+    background-image:url(../images/svg-code/background.svg);
+    background-size:cover;
+    background-position:center;
+    nav{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:28px 0;
+
+        .navbar_area{
+            display:flex;
+            align-items: center;
+            gap:28px;
+
+        .navbar{
+            display:flex;
+            align-items: center;
+            gap:28px;
+
+            a{
+                color:$white;
+                font-size: 18px;
+                font-weight: bold;
+                transition: $transition;
+
+                &:hover{
+                    color:$primary;
+                }
+                span{
+                    color:$white;
+                }
+            }
+            }
+        }
+    }
+    // banner start
+    .banner{
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 16px;
+        align-items: center;
+        padding:100px 0;
+
+        .content{
+            color:$white;
+            h1{
+                font-size:115px;
+                font-weight: 800;
+                line-height: 1em;
+                letter-spacing: 0.08em;
+                margin-bottom: 24px;
+                text-transform: uppercase;
+            }
+            p{
+                margin-bottom: 32px;
+                color:$white;
+            }
+        }
+    }
 }
